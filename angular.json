@@ -3,11 +3,18 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "xaverian-data": {
+    "my-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
         }
       },
       "root": "",
@@ -17,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/xaverian-data",
+            "outputPath": "dist/my-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "xaverian-data:build:production"
+              "buildTarget": "my-app:build:production"
             },
             "development": {
-              "buildTarget": "xaverian-data:build:development"
+              "buildTarget": "my-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,6 +107,6 @@
     }
   },
   "cli": {
-    "analytics": "abce68f3-1bac-4e05-8afb-d6a38b34bada"
+    "analytics": "52bfd0ec-5faa-44c4-9d1f-5cec1d718c8e"
   }
 }
