@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet></router-outlet>
-  `,
-  styles: []
+  standalone: true,
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Xavier-Data';
+  title = 'xaverian-data';
 }
