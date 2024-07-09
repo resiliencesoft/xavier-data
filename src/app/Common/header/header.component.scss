@@ -1,44 +1,67 @@
-#navbar{
-   padding: 15px;
+#navbar {
+  padding: 15px;
 }
-#navbar h5{
-    color: #0076BC;
-    margin:0;
+#navbar h5 {
+  color: #0076bc;
+  margin: 0;
+}
+#navbar span {
+  color: #00a8d3;
+}
+.logo_text {
+  margin: 0;
+  font-size: 11px;
+  color: #ccc;
+}
+.Entrar_btn {
+  border: 2px solid #0076bc;
+  border-radius: 20px;
+  padding: 1px 15px 2px;
+  background: white;
+  color: #0076bc;
+  font-weight: 500;
+}
+.Registrase_btn {
+  border-radius: 20px;
+  background: #0076bc;
+  color: white;
+  border: 1px solid #0076bc;
+  padding: 1px 15px 2px;
+}
+.text_header {
+  margin-top: 64px;
+  margin: 3px 0 0;
+  color: #0076bc;
+  font-weight: 500;
+}
+.bi-plus-lg {
+  font-weight: 900 !important;
+}
+.logo_header {
+  max-height: 50px;
+}
+@media screen and (max-width: 768px) {
+    .logo_header{
+        max-height: 34px;
+    }
+}
+@media screen and (max-width: 576px) {
+  .logo_header{
+      max-height: 24px;
+  }
+  .Registrase_btn{
     
-
-}
-#navbar span{
-    color: #00A8D3;
-}
-.logo_text{
-    margin: 0;
+    padding: 1px 7px 2px;
     font-size: 11px;
-    color: #ccc;
 }
 .Entrar_btn{
-    border: 2px solid #0076BC;
-    border-radius: 20px;
-    padding: 1px 15px 2px;
-    background: white;
-    color: #0076BC;
-    font-weight: 500;
+  padding: 1px 7px 2px;
+  font-size: 11px;
 }
-.Registrase_btn{
-    border-radius: 20px;
-    background: #0076BC;
-    color: white;
-    border: 1px solid #0076BC;
-    padding: 1px 15px 2px;
+.text_header {
+  font-size: 11px;
 }
-.text_header{
-    margin-top: 64px;
-    margin: 3px 0 0;
-    color: #0076BC;
-    font-weight: 500;
+.container {
+  padding:0px
 }
-.bi-plus-lg{
-    font-weight: 900 !important;
-}
-.logo_header{
-    max-height: 50px;
 }

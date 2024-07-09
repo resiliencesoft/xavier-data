@@ -20,3 +20,8 @@
 .logo{
     max-height: 50px;
 }
+@media  screen and (max-width: 768px) {
+    .logo{
+        max-height: 35px;
+    }
+}

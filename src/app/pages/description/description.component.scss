@@ -1,0 +1,74 @@
+.placeholder-blue::placeholder {
+    color:#0076BC;
+  }
+  .search{
+    background: #0076BC;
+    border-color: #0076BC;
+ 
+  }
+  .main_div{
+    background-color: #fafafa;
+  }
+  .sidebar_top{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+  }
+  .sidebar_top p{
+color: grey;
+  }
+  .btn_div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+  }
+  .mensaje_btn{
+        background: white;
+        color: #252772;
+        font-weight: 500;
+        border: 2px solid #252772;
+        border-radius: 5px;
+  }
+  .Guardar_btn{
+    background: #252772;
+    color: white;
+    border: 1px solid #252772;
+    border-radius: 6px;
+  }
+  .heart_btn{
+    background: none;
+    border: none;
+    color: #0077BD;
+    font-size: 23px;
+  }
+  .table_div h5{
+color: #252772;
+  }
+ .table_div table{
+     color: grey;
+     font-size: 15px;
+ }
+ .highlight{
+    color: #0077BD;
+ }
+ .sidebar{
+    background-color: white;
+ }
+ .table_div h5{
+font-size: 18px;
+ }
+ .main_content h5{
+color: #252772;
+ }
+ .main_des_p{
+    color: #252772;
+ }
+ .main_content h6{
+    color: #0077BD;
+ }
+ .monster_Img{
+  width: 160px;
+    border-radius: 100%;
+ }
