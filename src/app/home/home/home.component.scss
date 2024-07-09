@@ -16,6 +16,9 @@
         margin: 0 8px;
         color: #0076BC;
 }
+.highlight{
+  color: #0C81C5;
+}
 .banner {
     min-height: 100vh;
     background: url('../../../assets/Img/bg.png') no-repeat center center; 
@@ -30,43 +33,8 @@
   .banner_content h2{
     font-size: 60px;
   }
-/* Styling for the select element */
-#custom-select {
-    background: rgba(255, 255, 255, 0.5); /* Translucent background */
-    border: 1px solid #ccc; /* Border color */
-    border-radius: 10px 0 0 10px; /* Rounded corners on the left side only */
-    padding: 10px 30px; /* Padding for better spacing */
-    outline: none; /* Remove default outline */
-    appearance: none; /* Remove default arrow */
-    -webkit-appearance: none; /* Remove default arrow in Safari */
-    -moz-appearance: none; /* Remove default arrow in Firefox */
-    background-clip: padding-box; /* Prevent background bleeding */
-    position: relative; /* Needed for pseudo-element positioning */
-    color: #333; /* Text color */
-    font-size: 17px; /* Font size */
-  }
-  
-  /* Create a custom arrow for the select element */
-  #custom-select::after {
-    content: '▼'; /* Custom arrow character */
-    font-size: 12px; /* Adjust arrow size */
-    color: #333; /* Arrow color */
-    position: absolute; /* Absolute positioning */
-    right: 10px; /* Positioning from the right */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust to center */
-    pointer-events: none; /* Ensure the arrow is not clickable */
-  }
-  
-  #custom-select {
-    padding-right: 30px;
-  }
-  
-  /* Style the option elements */
-  #custom-select option {
-    background: rgba(255, 255, 255, 0.8); 
-    color: #333; /* Text color */
-  }
+
+ 
   .input_text{
     display: inline;
     background: white;
@@ -79,43 +47,37 @@
   }
   .search{
     background: #0076BC;
-    padding: 12px 13px;
-    color: white;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 1px solid #0076BC;
+    border-color: #0076BC;
+ 
   }
-  .Buscar_text{
-    color: #0076BC;
-    padding-right: 250px ;
-    border-right: 2px solid #0076BC;
-  }
-  .Donde_text{
-    color: #0076BC;
-    margin: 0 110px 0 25px;
-  }
+  
   .bi-geo-alt{
     margin-right: 10px;
   }
+
+  .input-group{
+    height: 50px;
+  }
+  .placeholder-blue::placeholder {
+    color:#0076BC;
+  }
+  .form-select{
+font-weight: 500;
+  }
+
+
+
   @media  screen and (max-width: 992px) {
-    .Buscar_text{
-        padding-right: 150px !important;
-    }
-    .Donde_text{
-        margin: 0 50px 0 25px !important;
-    }
+   
+   
     .banner_content{
         width: 671px !important;
         margin: auto;
     }
 }
 @media  screen and (max-width: 768px) {
-  .Buscar_text{
-      padding-right: 50px !important;
-  }
-  .Donde_text{
-      margin: 0 25px 0 15px !important;
-  }
+ 
+ 
   .banner_content{
       width: 541px !important;
       margin: auto;
@@ -123,20 +85,20 @@
   .banner_content h2{
     font-size: 55px;
 }
+.sectioned{
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  margin: 0px 0;
+  align-content: space-between;
+  background: #f9f9f9;
+}
 }
 @media  screen and (max-width: 576px) {
-  #custom-select{
-    padding: 10px 5px;
-}
-  .Buscar_text{
-      padding-right: 10px !important;
-  }
-  .Donde_text{
-      margin: 0 10px 0 5px !important;
-  }
+ 
   .banner_content{
       width: 314px !important;
-      margin: auto;
+    color: white;
+    padding: 20px 0 40px;
   }
   .banner_content h2{
     font-size: 35px;
@@ -144,12 +106,6 @@
 .input_text{
   padding: 12px 0 12px 5px;
   font-size: 12px;
-}
-#custom-select{
-  font-size: 12px;
-}
-.search{
-  padding: 12px 6px;
 }
 .sectioned h5 {
   font-size: 11px;
@@ -159,4 +115,15 @@
   font-size: 11px;
   margin: 0;
 }
+.banner {
+   min-height: auto; 
+
+}
+.heading_blue{
+  font-size: 20px;
+  margin: 0 8px;
+  color: #0076BC;
+  font-weight: 500;
+}
+
 }
