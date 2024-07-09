@@ -97,4 +97,66 @@
   .bi-geo-alt{
     margin-right: 10px;
   }
-  
+  @media  screen and (max-width: 992px) {
+    .Buscar_text{
+        padding-right: 150px !important;
+    }
+    .Donde_text{
+        margin: 0 50px 0 25px !important;
+    }
+    .banner_content{
+        width: 671px !important;
+        margin: auto;
+    }
+}
+@media  screen and (max-width: 768px) {
+  .Buscar_text{
+      padding-right: 50px !important;
+  }
+  .Donde_text{
+      margin: 0 25px 0 15px !important;
+  }
+  .banner_content{
+      width: 541px !important;
+      margin: auto;
+  }
+  .banner_content h2{
+    font-size: 55px;
+}
+}
+@media  screen and (max-width: 576px) {
+  #custom-select{
+    padding: 10px 5px;
+}
+  .Buscar_text{
+      padding-right: 10px !important;
+  }
+  .Donde_text{
+      margin: 0 10px 0 5px !important;
+  }
+  .banner_content{
+      width: 314px !important;
+      margin: auto;
+  }
+  .banner_content h2{
+    font-size: 35px;
+}
+.input_text{
+  padding: 12px 0 12px 5px;
+  font-size: 12px;
+}
+#custom-select{
+  font-size: 12px;
+}
+.search{
+  padding: 12px 6px;
+}
+.sectioned h5 {
+  font-size: 11px;
+  margin: 0;
+}
+.sectioned p {
+  font-size: 11px;
+  margin: 0;
+}
+}
