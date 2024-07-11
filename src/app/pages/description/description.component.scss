@@ -20,9 +20,10 @@ color: grey;
   }
   .btn_div{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 90%;
     margin: auto;
+    gap: 10px;
   }
   .mensaje_btn{
         background: white;
@@ -41,7 +42,7 @@ color: grey;
     background: none;
     border: none;
     color: #0077BD;
-    font-size: 23px;
+    font-size: 20px;
   }
   .table_div h5{
 color: #252772;
@@ -60,10 +61,12 @@ color: #252772;
 font-size: 18px;
  }
  .main_content h5{
-color: #252772;
+color: #3b3ea3;
  }
  .main_des_p{
-    color: #252772;
+    color: #3b3ea3;
+    font-size: 14px;
+    font-weight: 500;
  }
  .main_content h6{
     color: #0077BD;
@@ -72,3 +75,84 @@ color: #252772;
   width: 160px;
     border-radius: 100%;
  }
+ .grey_desc{
+  display: inline;
+  font-size: 13px;
+  color: grey;
+  margin-left: 31px;
+ }
+ .class1_des{
+  font-size: 14px;
+    color: grey;
+ }
+ .bold_text{
+  color: grey;
+ }
+ .bold_text{
+  color: grey;
+  font-weight: 600;
+  font-size: 15px;
+}
+.normalgrey_text{
+  color: grey;
+  font-size: 15px; 
+}
+.table-header {
+  background-color: #f2f2f2; /* Grey background color */
+}
+.table-header th {
+  text-align: center; /* Center align text in header */
+  font-weight: 400;
+  font-size: 15px;
+  color:grey
+}
+.table td {
+  text-align: center; /* Center align text in header */
+  font-size: 14px;
+  color: grey;
+}
+.table-bordered {
+  border: 1px solid #dee2e6; /* Ensure borders are 1px solid and a light color */
+}
+.table{
+  --bs-table-bg: inherit !important;
+}
+
+.panel-heading {
+  cursor: pointer;
+}
+.panel-heading:hover {
+  background-color: #f5f5f5; /* Light grey background on hover */
+}
+
+
+.accordion-item:first-of-type > .accordion-header .accordion-button {
+   border-top-left-radius: 0;
+   border-top-right-radius:0
+}
+.accordion-button{
+   color: inherit;
+   background-color: #fafafa;
+   box-shadow: none;
+}
+.accordion-body {
+  background: #fafafa;
+}
+.table-bordered > :not(caption) > * > * {
+  border-width: 0;
+}
+.table_period{
+  min-width: 350px;
+  overflow: scroll;
+}
+.accordion-item {
+border: none;
+}
+@media  screen and (max-width: 768px) {
+.banner{
+  display: none;
+}
+.desc{
+  padding-left: 10px;
+}
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-description',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './description.component.scss'
 })
 export class DescriptionComponent {
-  
+
 }
