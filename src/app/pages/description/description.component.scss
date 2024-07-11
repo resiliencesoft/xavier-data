@@ -141,6 +141,18 @@ color: #3b3ea3;
 .table-bordered > :not(caption) > * > * {
   border-width: 0;
 }
+.table_period{
+  min-width: 350px;
+  overflow: scroll;
+}
 .accordion-item {
 border: none;
+}
+@media  screen and (max-width: 768px) {
+.banner{
+  display: none;
+}
+.desc{
+  padding-left: 10px;
+}
 }

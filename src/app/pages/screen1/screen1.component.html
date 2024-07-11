@@ -10,64 +10,163 @@
         <input type="text" class="form-control placeholder-blue" placeholder="&#191;D&#768;onde?">
         <button class="btn btn-primary search" type="button"><i class="bi bi-search"></i></button>
       </div>
+      <div class="word-scroll-container mt-4">
+        <button class="scroll-button" (click)="previous()"><i class="bi bi-chevron-left"></i></button>
+        <div class="words-container">
+          <div *ngFor="let word of currentWords" class="word">{{ word }}</div>
+        </div>
+        <button class="scroll-button" (click)="next()"><i class="bi bi-chevron-right"></i></button>
+      </div>
+</div>
+
+<div class="row">
+  <div class="col-md-11">
+    <button (click)="open=true" *ngIf="!open" class="filterButton"><span  class="me-3"><i class="bi bi-sliders"></i></span>Filtros</button>
+    <div class="row">
+      
+      
+      <div class="leftPart pe-0" [ngClass]="{'col-lg-3 col-md-5': open, 'col-0 d-none': !open}">
+        <div class="d-flex justify-content-between pt-2">
+          <h5 class="ms-5 text-muted mt-2"><span class="me-2"><i class="bi bi-sliders"></i></span>Filtros</h5>
+          <span class="fs-5 me-3" (click)="open=false"><i class="bi bi-chevron-left"></i></span>
+        </div>
+      
+        <hr>
+        <div class="sidebar">
+          <div class="d-flex">
+            <span class="loaction_icon"><i class="bi bi-geo-alt"></i></span>
+    <input type="text" placeholder="Lima" class="form-control">
+      
+          </div>
+          <div class="d-flex justify-content-between mt-2">
+            <p class="Grey_bold_text">Filtrar por</p>
+            <p class="blue_bold_text">Borrar</p>
+          </div>
+          <select class="form-select border-0 mb-2 ps-0 fw-semibold" >
+            <option selected>Actividad</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <div class="table_checkbox">
+            <table >
+              <ng-container *ngFor="let data of checkbox">
+              <tr>
+                <td class="checkbox-cell">
+                  <input type="checkbox">
+                </td>
+                <td class="text-cell font_13">
+                  {{data.text}}
+                </td>
+                <td class="number-cell font_13">{{data.amount}}</td>
+              </tr>
+            </ng-container>
+            </table>
+          </div>
+         
+        </div>
+        <hr>
+        <div class="sidebar">
+          <select class="form-select border-0 mb-2 ps-0 fw-semibold" >
+            <option selected>Marcas por clase</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <div class="table_checkbox">
+            <table >
+              <ng-container *ngFor="let data of checkbox">
+              <tr>
+                <td class="checkbox-cell ">
+                  <input type="checkbox">
+                </td>
+                <td class="text-cell font_13">
+                  {{data.text}}
+                </td>
+                <td class="number-cell font_13">{{data.amount}}</td>
+              </tr>
+            </ng-container>
+            </table>
+          </div>
+          
+        </div>
+        <div class="align-content-end banner side_banner">
+          <img class="img-fluid" src="../../../assets/Img/banner2.png" alt="">
+        </div>
+      </div>
+      <div  [ngClass]="{'col-12 ms-5': !open, 'col-lg-9 col-md-7 p-0': open}">
+        <div class="ms-3">
+          <ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs mt-2">
+            <li [ngbNavItem]="1" [destroyOnHide]="true">
+              <button ngbNavLink>Ordenar por</button>
+              <ng-template ngbNavContent>
+                <div class="ms-4">
+                  <p><span class="fw-semibold">Actividad: </span><span class="text-muted font_13"> Actividades académicas y de enseñanza</span> </p>
+                  <p><span class="fw-semibold">Clase 1: </span ><span class="text-muted font_13"> Productos químicos para la industria, la ciencia y la fotografía, así como para la agricultura, la horticultura y la silvicultura; resinas artificiales en bruto, materias plásticas en bruto; abonos para el suelo; composiciones extintoras; preparaciones para templar y soldar metales; productos químicos para conservar alimentos; materias curtientes; adhesivos (pegamentos) para la industria</span>
+                  </p>
+                </div>
+      <div class="">
+        <table class="table table-hover table-bordered bg_light guardar_table">
+          <ng-container *ngFor="let data of words">
+          <tr>
+            <td class="ps-4 pt-3 pb-1"> <p class="m-0 p-0 blue_text bg_light">EL DEALER AUTORIZADO MOVISTAR E.I.R.L (RUC: 20481791180) </p>
+              <p class="m-0 pt-0 ps-0 text-muted bg_light">EL DEALER AUTORIZADO MOVISTAR</p></td>
+            <td > <button class="Guardar_btn ">Guardar</button></td>
+            <td><span class="heart_btn bg_light"><i class="bi bi-heart-fill"></i></span></td>
+          </tr>
+        </ng-container>
+        </table>
+      </div>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+              <button ngbNavLink>Alfabético</button>
+              <ng-template ngbNavContent>
+                <p>Alfabético
+                </p>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="3">
+              <button ngbNavLink>Popularidad</button>
+              <ng-template ngbNavContent let-active>
+                <p>
+                  Popularidad
+                </p>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="4">
+              <button ngbNavLink>Fecha de constitución</button>
+              <ng-template ngbNavContent let-active>
+                <p>
+                  Fecha de constitución
+                </p>
+              </ng-template>
+            </li>
+          </ul>
+          
+          <div [ngbNavOutlet]="nav" class="mt-2"></div>
+          <div class="Pagination_div">
+            <ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true" class="pagination" />
+
+          </div>
+          <div>
+            <img class="img-fluid" src="../../../assets/Img/banner1.png" alt="">
+
+          </div>
+        </div>
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1  banner">
+<!-- <img src="../../../assets/Img/banner3.png" class="img-fluid" alt=""> -->
+  </div>
+</div>
+<div>
 </div>
 
 
-<ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs">
-	<li [ngbNavItem]="1" [destroyOnHide]="true">
-		<button ngbNavLink>One</button>
-		<ng-template ngbNavContent>
-			<ngb-alert [dismissible]="false" class="d-block mt-3" type="danger">
-				This tab content DOM will de destroyed when not active
-			</ngb-alert>
 
-			<p>
-				Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
-				master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
-				keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
-				salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-			</p>
-		</ng-template>
-	</li>
-	<li [ngbNavItem]="2">
-		<button ngbNavLink>Two</button>
-		<ng-template ngbNavContent>
-			<ngb-alert [dismissible]="false" class="d-block mt-3" type="success">
-				This tab content DOM will always stay in DOM
-			</ngb-alert>
-
-			<p>
-				Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-				farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-				ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-				helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-				8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-				stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
-			</p>
-		</ng-template>
-	</li>
-	<li [ngbNavItem]="3">
-		<button ngbNavLink>Three</button>
-		<ng-template ngbNavContent let-active>
-			@if (active) {
-				<ngb-alert [dismissible]="false" class="d-block mt-3">
-					While tab content DOM is never destroyed, this alert exists only when current tab is active
-				</ngb-alert>
-			}
-
-			<p>
-				Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
-				Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
-				Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
-				egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
-				tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
-				magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
-				neque. Phasellus nec tortor vel tellus pulvinar feugiat.
-			</p>
-		</ng-template>
-	</li>
-</ul>
-
-<div [ngbNavOutlet]="nav" class="mt-2"></div>
-
-<pre>Active: {{ active }}</pre>
