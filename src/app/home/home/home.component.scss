@@ -17,11 +17,11 @@
         color: #0076BC;
 }
 .highlight{
-  color: #0C81C5;
+  color: #00A8D3;
 }
 .banner {
-    min-height: 100vh;
-    background: url('../../../assets/Img/bg.png') no-repeat center center; 
+    min-height: 500px;
+    background: url('/assets/Img/bg.png') no-repeat center center; 
     background-size: cover; 
   }
   .banner_content{
@@ -96,12 +96,15 @@ font-weight: 500;
 @media  screen and (max-width: 576px) {
  
   .banner_content{
-      width: 314px !important;
+      width: 350px !important;
     color: white;
     padding: 20px 0 40px;
   }
   .banner_content h2{
-    font-size: 35px;
+    font-size: 28px;
+}
+.input-group{
+  height: 38px;
 }
 .input_text{
   padding: 12px 0 12px 5px;
