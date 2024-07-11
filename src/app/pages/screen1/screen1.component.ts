@@ -11,7 +11,12 @@ export class Screen1Component {
   currentIndex: number = 0;
   pageSize: number = 7;
   page = 4;
-  open:boolean = true;
+  open!: boolean;
+  isMobile:boolean
+  constructor(){
+    this.isMobile = window.innerWidth <= 768;
+    this.open=!this.isMobile
+  }
   get currentWords(): string[] {
     return this.words.slice(this.currentIndex, this.currentIndex + this.pageSize);
   }

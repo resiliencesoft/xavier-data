@@ -1,6 +1,6 @@
 <div class="container mt-3 mb-5">
     <div class="input-group">
-        <select class="form-select">
+        <select class="form-select grey-background">
           <option selected>Nombre o Rozon social</option>
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
@@ -19,9 +19,9 @@
       </div>
 </div>
 
-<div class="row">
-  <div class="col-md-11">
-    <button (click)="open=true" *ngIf="!open" class="filterButton"><span  class="me-3"><i class="bi bi-sliders"></i></span>Filtros</button>
+<div class="row m-0">
+  <div class="col-lg-11">
+    <button (click)="open=true" *ngIf="!open" class="filterButton ms-md-4 ms-3"><span  class="me-3"><i class="bi bi-sliders"></i></span>Filtros</button>
     <div class="row">
       
       
@@ -53,7 +53,7 @@
               <ng-container *ngFor="let data of checkbox">
               <tr>
                 <td class="checkbox-cell">
-                  <input type="checkbox">
+                  <input class="custom-checkbox" type="checkbox">
                 </td>
                 <td class="text-cell font_13">
                   {{data.text}}
@@ -78,7 +78,7 @@
               <ng-container *ngFor="let data of checkbox">
               <tr>
                 <td class="checkbox-cell ">
-                  <input type="checkbox">
+                  <input type="checkbox" class="custom-checkbox">
                 </td>
                 <td class="text-cell font_13">
                   {{data.text}}
@@ -94,11 +94,55 @@
           <img class="img-fluid" src="../../../assets/Img/banner2.png" alt="">
         </div>
       </div>
-      <div  [ngClass]="{'col-12 ms-5': !open, 'col-lg-9 col-md-7 p-0': open}">
+      <div  [ngClass]="{'col-12 ms-md-2': !open, 'col-lg-9 col-md-7 p-0': open}">
         <div class="ms-3">
           <ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs mt-2">
             <li [ngbNavItem]="1" [destroyOnHide]="true">
               <button ngbNavLink>Ordenar por</button>
+              <ng-template ngbNavContent>
+                <div class="ms-4">
+                  <p><span class="fw-semibold">Actividad: </span><span class="text-muted font_13"> Actividades académicas y de enseñanza</span> </p>
+                  <p><span class="fw-semibold">Clase 1: </span ><span class="text-muted font_13"> Productos químicos para la industria, la ciencia y la fotografía, así como para la agricultura, la horticultura y la silvicultura; resinas artificiales en bruto, materias plásticas en bruto; abonos para el suelo; composiciones extintoras; preparaciones para templar y soldar metales; productos químicos para conservar alimentos; materias curtientes; adhesivos (pegamentos) para la industria</span>
+                  </p>
+                </div>
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered bg_light guardar_table">
+          <ng-container *ngFor="let data of words">
+          <tr>
+            <td class="ps-4 pt-3 pb-1"> <p class="m-0 p-0 blue_text bg_light font_14">EL DEALER AUTORIZADO MOVISTAR E.I.R.L (RUC: 20481791180) </p>
+              <p class="m-0 pt-0 ps-0 text-muted bg_light font_14">EL DEALER AUTORIZADO MOVISTAR</p></td>
+            <td > <button class="Guardar_btn ">Guardar</button></td>
+            <td><span class="heart_btn bg_light"><i class="bi bi-heart-fill"></i></span></td>
+          </tr>
+        </ng-container>
+        </table>
+      </div>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+              <button ngbNavLink>Alfabético</button>
+              <ng-template ngbNavContent>
+                <div class="ms-4">
+                  <p><span class="fw-semibold font_14Media">Actividad: </span><span class="text-muted font_13"> Actividades académicas y de enseñanza</span> </p>
+                  <p><span class="fw-semibold font_14Media">Clase 1: </span ><span class="text-muted font_13"> Productos químicos para la industria, la ciencia y la fotografía, así como para la agricultura, la horticultura y la silvicultura; resinas artificiales en bruto, materias plásticas en bruto; abonos para el suelo; composiciones extintoras; preparaciones para templar y soldar metales; productos químicos para conservar alimentos; materias curtientes; adhesivos (pegamentos) para la industria</span>
+                  </p>
+                </div>
+      <div class="">
+        <table class="table table-hover table-bordered bg_light guardar_table">
+          <ng-container *ngFor="let data of words">
+          <tr>
+            <td class="ps-4 pt-3 pb-1"> <p class="m-0 p-0 blue_text bg_light">EL DEALER AUTORIZADO MOVISTAR E.I.R.L (RUC: 20481791180) </p>
+              <p class="m-0 pt-0 ps-0 text-muted bg_light">EL DEALER AUTORIZADO MOVISTAR</p></td>
+            <td > <button class="Guardar_btn ">Guardar</button></td>
+            <td><span class="heart_btn bg_light"><i class="bi bi-heart-fill"></i></span></td>
+          </tr>
+        </ng-container>
+        </table>
+      </div>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="3">
+              <button ngbNavLink>Popularidad</button>
               <ng-template ngbNavContent>
                 <div class="ms-4">
                   <p><span class="fw-semibold">Actividad: </span><span class="text-muted font_13"> Actividades académicas y de enseñanza</span> </p>
@@ -119,27 +163,26 @@
       </div>
               </ng-template>
             </li>
-            <li [ngbNavItem]="2">
-              <button ngbNavLink>Alfabético</button>
-              <ng-template ngbNavContent>
-                <p>Alfabético
-                </p>
-              </ng-template>
-            </li>
-            <li [ngbNavItem]="3">
-              <button ngbNavLink>Popularidad</button>
-              <ng-template ngbNavContent let-active>
-                <p>
-                  Popularidad
-                </p>
-              </ng-template>
-            </li>
             <li [ngbNavItem]="4">
               <button ngbNavLink>Fecha de constitución</button>
-              <ng-template ngbNavContent let-active>
-                <p>
-                  Fecha de constitución
-                </p>
+              <ng-template ngbNavContent>
+                <div class="ms-4">
+                  <p><span class="fw-semibold">Actividad: </span><span class="text-muted font_13"> Actividades académicas y de enseñanza</span> </p>
+                  <p><span class="fw-semibold">Clase 1: </span ><span class="text-muted font_13"> Productos químicos para la industria, la ciencia y la fotografía, así como para la agricultura, la horticultura y la silvicultura; resinas artificiales en bruto, materias plásticas en bruto; abonos para el suelo; composiciones extintoras; preparaciones para templar y soldar metales; productos químicos para conservar alimentos; materias curtientes; adhesivos (pegamentos) para la industria</span>
+                  </p>
+                </div>
+      <div class="">
+        <table class="table table-hover table-bordered bg_light guardar_table">
+          <ng-container *ngFor="let data of words">
+          <tr>
+            <td class="ps-4 pt-3 pb-1"> <p class="m-0 p-0 blue_text bg_light">EL DEALER AUTORIZADO MOVISTAR E.I.R.L (RUC: 20481791180) </p>
+              <p class="m-0 pt-0 ps-0 text-muted bg_light">EL DEALER AUTORIZADO MOVISTAR</p></td>
+            <td > <button class="Guardar_btn ">Guardar</button></td>
+            <td><span class="heart_btn bg_light"><i class="bi bi-heart-fill"></i></span></td>
+          </tr>
+        </ng-container>
+        </table>
+      </div>
               </ng-template>
             </li>
           </ul>
@@ -161,8 +204,8 @@
       </div>
     </div>
   </div>
-  <div class="col-md-1  banner">
-<!-- <img src="../../../assets/Img/banner3.png" class="img-fluid" alt=""> -->
+  <div class="col-lg-1  banner2">
+<img src="../../../assets/Img/banner3.png" class="img-fluid" alt="">
   </div>
 </div>
 <div>

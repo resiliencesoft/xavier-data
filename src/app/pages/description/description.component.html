@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container mt-3">
     <div class="input-group">
-        <select class="form-select">
+        <select class="form-select grey-background">
           <option selected>Nombre o Rozon social</option>
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
@@ -13,8 +13,8 @@
       
       
 </div>
-<div class="row">
-    <div class="col-md-11 p-0"><div class="main_div mt-5" >
+<div class="row m-0">
+    <div class="col-lg-11 p-0"><div class="main_div mt-md-5" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-5 sidebar mt-4 mb-4">
@@ -114,7 +114,20 @@
                                               <p class="m-0 normalgrey_text">30/03/2015</p>
                                               <p class="m-0 normalgrey_text">30/03/2015</p>
                                             </div>
+                                          
                                           </div>
+                                          <table class="table">
+                                            <tr>
+                                              <td class="m-0 bold_text">GERENTE GENERAL</td>
+                                              <td class="m-0 normalgrey_text">CRUCES LIBERT CESAR DOMINGO</td>
+                                              <td class="m-0 normalgrey_text">30/03/2015</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="m-0 bold_text">APODERADO</td>
+                                              <td class="m-0 normalgrey_text">CRUCES LIBERT CESAR DOMINGO</td>
+                                              <td class="m-0 normalgrey_text">30/03/2015</td>
+                                            </tr>
+                                          </table>
                                         </div>
                                       </div>
                                     </div>
@@ -128,7 +141,7 @@
                                       </h2>
                                       <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
                                         <div class="accordion-body">
-                                          <div class="table_period"> <table class="table table-bordered">
+                                          <div class="table_period"> <table class="table table-bordered text-center">
                                             <thead class="table-header">
                                               <tr>
                                                 <th scope="col" class="fw-semibold">PERIODO</th>
@@ -139,7 +152,7 @@
                                             </thead>
                                             <tbody>
                                               <tr>
-                                                <td>2009-10</td>
+                                                <td class="text-center">2009-10</td>
                                                 <td>4</td>
                                                 <td>0</td>
                                                 <td>2</td>
@@ -192,7 +205,7 @@
         </div>
         
         </div></div>
-    <div class="col-md-1 banner align-content-end">
+    <div class="col-lg-1 banner2 align-content-end">
         <img src="../../../assets/Img/banner3.png" class="img-fluid" alt="">
     </div>
 </div>
@@ -203,6 +216,13 @@
                 <img class="img-fluid" src="../../../assets/Img/banner2.png" alt="">
             </div>
             <div class="col-md-9 mb-2 align-content-end">
+              <div class="word-scroll-container mt-4 mb-5">
+                <button class="scroll-button" (click)="previous()"><i class="bi bi-chevron-left"></i></button>
+                <div class="words-container">
+                  <div *ngFor="let word of currentWords" class="word">{{ word }}</div>
+                </div>
+                <button class="scroll-button" (click)="next()"><i class="bi bi-chevron-right"></i></button>
+              </div>
                 <img class="img-fluid" src="../../../assets/Img/banner1.png" alt="">
             </div>
         </div>
