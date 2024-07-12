@@ -190,7 +190,35 @@ border: none;
 .scroll-button:hover {
   background-color: #e0e0e0;
 }
-
+.buscar_input:before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 2px;
+  height: 32px;
+  background: #0076bc;
+  z-index: 111111;
+}
+.Buscarr{
+height: 51px;
+border-radius: 0;
+}
+.buscar_input{
+position: relative;
+}
+.search_input{
+  position: absolute;
+  color: #0076bc;
+  top: 13px;
+  left: 17px;
+}
+.border_right_none{
+  border-right: none !important;
+}
+.border_left_none{
+  border-left: none !important;
+}
 @media  screen and (max-width: 768px) {
 .banner{
   display: none;

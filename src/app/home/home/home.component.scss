@@ -64,9 +64,41 @@
   .form-select{
 font-weight: 500;
   }
-
-
-
+  .input-group .form-select.grey-background {
+    background-color: #EDEDF4 !important;
+    font-weight: 500 !important;
+  }
+  .buscar_input:before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 2px;
+    height: 32px;
+    background: #0076bc;
+    z-index: 111111;
+}
+.Buscarr{
+  height: 51px;
+  border-radius: 0;
+  width: 136px;
+}
+.buscar_input{
+  position: relative;
+}
+.search_input{
+    position: absolute;
+    color: #0076bc;
+    top: 13px;
+    left: 17px;
+}
+@media  screen and (max-width: 602px) {
+  .Buscarr{
+    height: 51px;
+    border-radius: 0;
+    width: 100px;
+  }
+}
   @media  screen and (max-width: 992px) {
    
    
