@@ -24,7 +24,7 @@
     <div class="col-lg-11 p-0"><div class="main_div mt-md-5" >
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-5 sidebar mt-4 mb-4">
+                <div class="col-lg-3 col-md-5 sidebar mt-4">
                     <div class="sidebar_top">
                         <img src="../../../assets/Img/monster.png" class="monster_Img mt-3 mb-2" alt="">
                         <h5 class="mt-0">EL DEALEAR AUTORIZADO MOVISTAR E.I.R.L</h5>
@@ -75,6 +75,9 @@
                         </tr>
                     </table>
                    </div>
+                   <div class=" banner">
+                    <img class="img-fluid align-content-end" src="../../../assets/Img/banner2.png" alt="">
+                </div>
                 </div>
                 <div class="col-lg-9 col-md-7 mt-4 p-0 desc">
                     <div class="container main_content">
@@ -103,26 +106,12 @@
                                     <div class="accordion-item">
                                       <h2 class="accordion-header">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                          <h6>Representantes Legales</h6>
+                                          <h5>Representantes Legales</h5>
                                         </button>
                                       </h2>
                                       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                          <div class="row">
-                                            <div class="col-4">
-                                              <p class="m-0 bold_text">GERENTE GENERAL</p>
-                                              <p class="m-0 bold_text">APODERADO</p>
-                                            </div>
-                                            <div class="col-4">
-                                              <p class="m-0 normalgrey_text">CRUCES LIBERT CESAR DOMINGO</p>
-                                              <p class="m-0 normalgrey_text">CRUCES LIBERT CESAR DOMINGO</p>
-                                            </div>
-                                            <div class="col-4">
-                                              <p class="m-0 normalgrey_text">30/03/2015</p>
-                                              <p class="m-0 normalgrey_text">30/03/2015</p>
-                                            </div>
                                           
-                                          </div>
                                           <table class="table">
                                             <tr>
                                               <td class="m-0 bold_text">GERENTE GENERAL</td>
@@ -143,7 +132,7 @@
                                     <div class="accordion-item">
                                       <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                          <h6>Cantidad de trabajadores y o prestadores de servicios</h6>
+                                          <h5>Cantidad de trabajadores y o prestadores de servicios</h5>
                                         </button>
                                       </h2>
                                       <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
@@ -187,7 +176,7 @@
                                     <div class="accordion-item">
                                       <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                          <h6>Establecimientos Anexos</h6>
+                                          <h5>Establecimientos Anexos</h5>
                                         </button>
                                       </h2>
                                       <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionExample3">
@@ -207,30 +196,29 @@
                                 
                                 
                     </div>
+                    <div class="word-scroll-container mt-4 mb-5">
+                      <button class="scroll-button" (click)="previous()"><i class="bi bi-chevron-left"></i></button>
+                      <div class="words-container">
+                        <div *ngFor="let word of currentWords" class="word">{{ word }}</div>
+                      </div>
+                      <button class="scroll-button" (click)="next()"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                      <img class="img-fluid" src="../../../assets/Img/banner1.png" alt="">
                 </div>
             </div>
         </div>
         
         </div></div>
-    <div class="col-lg-1 banner2 align-content-end">
+    <div class="col-lg-1 banner2 align-content-start mt-5">
         <img src="../../../assets/Img/banner3.png" class="img-fluid" alt="">
     </div>
 </div>
 <div>
     <div class="container mt-4">
         <div class="row">
-            <div class="col-md-3 banner">
-                <img class="img-fluid" src="../../../assets/Img/banner2.png" alt="">
-            </div>
+           
             <div class="col-md-9 mb-2 align-content-end">
-              <div class="word-scroll-container mt-4 mb-5">
-                <button class="scroll-button" (click)="previous()"><i class="bi bi-chevron-left"></i></button>
-                <div class="words-container">
-                  <div *ngFor="let word of currentWords" class="word">{{ word }}</div>
-                </div>
-                <button class="scroll-button" (click)="next()"><i class="bi bi-chevron-right"></i></button>
-              </div>
-                <img class="img-fluid" src="../../../assets/Img/banner1.png" alt="">
+              
             </div>
         </div>
     </div>
