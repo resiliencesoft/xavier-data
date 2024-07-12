@@ -30,13 +30,13 @@
 
 <div class="row m-0">
   <div class="col-lg-11">
-    <button (click)="open=true" *ngIf="!open" class="filterButton ms-md-4 ms-3"><span  class="me-3"><i class="bi bi-sliders"></i></span>Filtros</button>
+    <button (click)="open=true" *ngIf="!open" class="filterButton ms-md-4 ms-md-3"><span  class="me-3"><i class="bi bi-sliders"></i></span>Filtros</button>
     <div class="row">
       
       
       <div class="leftPart pe-0" [ngClass]="{'col-lg-3 col-md-5': open, 'col-0 d-none': !open}">
         <div class="d-flex justify-content-between pt-2">
-          <h5 class="ms-5 text-muted mt-2"><span class="me-2"><i class="bi bi-sliders"></i></span>Filtros</h5>
+          <h5 class="ms-md-5 ms-1 text-muted mt-2"><span class="me-2"><i class="bi bi-sliders"></i></span>Filtros</h5>
           <span class="fs-5 me-3" (click)="open=false"><i class="bi bi-chevron-left"></i></span>
         </div>
       
@@ -104,7 +104,7 @@
         </div>
       </div>
       <div  [ngClass]="{'col-12 ms-md-2': !open, 'col-lg-9 col-md-7 p-0': open}">
-        <div class="ms-3">
+        <div class="ms-md-3">
           <ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs mt-2">
             <li [ngbNavItem]="1" [destroyOnHide]="true">
               <button ngbNavLink>Ordenar por</button>
@@ -115,7 +115,7 @@
                   </p>
                 </div>
       <div class="table-responsive">
-        <table class="table table-hover table-bordered bg_light guardar_table">
+        <table class="table table-hover table-bordered bg_light guardar_table mb-0">
           <ng-container *ngFor="let data of words">
           <tr>
             <td class="ps-4 pt-3 pb-1"> <p class="m-0 p-0 blue_text bg_light font_14">EL DEALER AUTORIZADO MOVISTAR E.I.R.L (RUC: 20481791180) </p>
