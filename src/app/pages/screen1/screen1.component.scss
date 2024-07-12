@@ -220,9 +220,15 @@ background-color: #fafafa;
   z-index: 111111;
 }
 .Buscarr{
-height: 51px;
-border-radius: 0;
-}
+  height: 51px;
+  border-right: none;
+  border-radius: 0;
+  }
+  .Buscarr2{
+    height: 51px;
+    border-radius: 0;
+    border-left: none;
+    }
 .buscar_input{
 position: relative;
 }
@@ -301,9 +307,98 @@ position: relative;
       padding: 7px 5px;
       font-size: 12px;
   }
+  .word {
+    flex: 0 0 auto;
+    width: auto;
+    text-align: center;
+    padding: 3px 6px;
+    border: 2px solid #ccc;
+    margin: 0 5px;
+    border-radius: 7px;
+    font-weight: 600;
+    color: #5e5555;
+    font-size: 12px;
+}
   .filterButton[_ngcontent-ng-c3921028781] {
     border: none;
     border-radius: 3px;
     padding: 4px 10px;
 }
   }
+  @media  screen and (max-width: 609px) {
+    ::ng-deep .page-link {
+      font-size: 10px;
+      padding: 9px;
+  }
+    .Buscarr{
+      height: 37px;
+      border-radius: 0;
+      width: 100%;
+      border-radius: 4px 0 0 4px;
+    }
+    .Buscarr2{
+      height: 37px;
+      border-radius: 0;
+      width: 100%;
+    }
+      .select_input {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 3px;
+    }
+    .search_input {
+      position: absolute;
+      color: #0076bc;
+      top: 7px;
+      left: 17px;
+  }
+    .buscar_input:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: 2px;
+        height: 25px;
+        background: #0076bc;
+        z-index: 111111;
+    }
+    .search {
+      background: #252772;
+      border-color: #252772;
+      font-size: 15px;
+  }
+    .buscar_input{
+  width: 40%;
+    }
+    .donde_div{
+      width: 48%;
+    }
+    .buscar_input :before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: 0;
+      width: 2px;
+      height: 22px;
+      background: #0076bc;
+      z-index: 111111;
+  }
+  .search_input[_ngcontent-ng-c2309093079] {
+    position: absolute;
+    color: #0076bc;
+    top: 7px;
+    left: 17px;
+  }
+  .input-group{
+    margin-bottom: 62px;
+  }
+  }
+  @media (min-width: 609px) and (max-width: 768px) {
+    .donde_div{
+      width: 24px;
+    }
+  }
+  .donde_div{
+    width: 45%;
+
+}

@@ -83,6 +83,11 @@ font-weight: 500;
   border-radius: 0;
   width: 136px;
 }
+.Buscarr2{
+  height: 51px;
+  border-radius: 0;
+  width: 136px;
+}
 .buscar_input{
   position: relative;
 }
@@ -92,12 +97,61 @@ font-weight: 500;
     top: 13px;
     left: 17px;
 }
-@media  screen and (max-width: 602px) {
+@media  screen and (max-width: 609px) {
   .Buscarr{
-    height: 51px;
+    height: 37px;
     border-radius: 0;
-    width: 100px;
+    width: 100%;
+    border-radius: 4px 0 0 4px;
   }
+  .Buscarr2{
+    height: 37px;
+    border-radius: 0;
+    width: 100%;
+  }
+    .select_input {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 3px;
+  }
+  .search_input[_ngcontent-ng-c102875723] {
+    position: absolute;
+    color: #0076bc;
+    top: 7px;
+    left: 17px;
+}
+  .buscar_input[_ngcontent-ng-c102875723]:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 2px;
+    height: 24px;
+    background: #0076bc;
+    z-index: 111111;
+}
+  .buscar_input{
+width: 40%;
+  }
+  .donde_div{
+    width: 48%;
+  }
+  .buscar_input[_ngcontent-ng-c2309093079]:before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 2px;
+    height: 22px;
+    background: #0076bc;
+    z-index: 111111;
+}
+.search_input[_ngcontent-ng-c2309093079] {
+  position: absolute;
+  color: #0076bc;
+  top: 7px;
+  left: 17px;
+}
 }
   @media  screen and (max-width: 992px) {
    
@@ -151,7 +205,7 @@ font-weight: 500;
   margin: 0;
 }
 .banner {
-   min-height: auto; 
+   min-height: 300px; 
 
 }
 .heading_blue{
@@ -161,4 +215,15 @@ font-weight: 500;
   font-weight: 500;
 }
 
+}
+@media  screen and (max-width: 376px) {
+  .donde_div{
+    width: 45%;
+
+}
+.banner_content{
+  width: 270px !important;
+  color: white;
+  padding: 20px 0 40px;
+}
 }
