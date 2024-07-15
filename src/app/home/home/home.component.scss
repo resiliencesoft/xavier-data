@@ -63,6 +63,7 @@
   }
   .form-select{
 font-weight: 500;
+max-width: 250px;
   }
   .input-group .form-select.grey-background {
     background-color: #EDEDF4 !important;
@@ -82,11 +83,13 @@ font-weight: 500;
   height: 51px;
   border-radius: 0;
   width: 136px;
+  width: 275px;
 }
 .Buscarr2{
   height: 51px;
   border-radius: 0;
   width: 136px;
+  // width: 200px;
 }
 .buscar_input{
   position: relative;
@@ -113,7 +116,24 @@ font-weight: 500;
       width: 100%;
       border-radius: 5px !important;
       margin-bottom: 3px;
+      max-width: inherit;
   }
+  .buscar_input[_ngcontent-ng-c1130260071]:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 2px;
+    height: 27px;
+    background: #0076bc;
+    z-index: 111111;
+}
+.search_input[_ngcontent-ng-c1130260071] {
+  position: absolute;
+  color: #0076bc;
+  top: 8px;
+  left: 17px;
+}
   .search_input[_ngcontent-ng-c102875723] {
     position: absolute;
     color: #0076bc;
