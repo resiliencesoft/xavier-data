@@ -147,7 +147,9 @@ color: #3b3ea3;
 .table-bordered > :not(caption) > * > * {
   border-width: 0;
 }
-
+.donde_div{
+  width: 25%;
+}
 .accordion-item {
 border: none;
 }
@@ -212,6 +214,7 @@ border-radius: 0;
   }
 .buscar_input{
 position: relative;
+width: 35%;
 }
 .search_input{
   position: absolute;
