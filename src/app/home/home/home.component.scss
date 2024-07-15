@@ -82,8 +82,7 @@ max-width: 250px;
 .Buscarr{
   height: 51px;
   border-radius: 0;
-  width: 136px;
-  width: 275px;
+  width: 350px;
 }
 .Buscarr2{
   height: 51px;
@@ -173,6 +172,17 @@ width: 40%;
   left: 17px;
 }
 }
+
+@media  screen and (min-width: 2200px) {
+ .banner{ min-height: 70vh;
+ }
+}
+@media  screen and (min-width: 1400px) {
+  .banner_content{
+    padding: 150px 0;
+}
+ }
+
   @media  screen and (max-width: 992px) {
    
    
@@ -183,7 +193,10 @@ width: 40%;
 }
 @media  screen and (max-width: 768px) {
  
- 
+ .Buscarr {
+
+    width: 264px;
+}
   .banner_content{
       width: 541px !important;
       margin: auto;
@@ -239,7 +252,6 @@ width: 40%;
 @media  screen and (max-width: 376px) {
   .donde_div{
     width: 45%;
-
 }
 .banner_content{
   width: 270px !important;
