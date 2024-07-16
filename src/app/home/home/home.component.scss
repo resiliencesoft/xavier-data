@@ -20,7 +20,7 @@
   color: #00A8D3;
 }
 .banner {
-    min-height: 500px;
+    min-height: 62vh;
     background: url('/assets/Img/bg.png') no-repeat center center; 
     background-size: cover; 
   }
@@ -238,7 +238,7 @@ width: 40%;
   margin: 0;
 }
 .banner {
-   min-height: 300px; 
+   min-height: 42vh; 
 
 }
 .heading_blue{
@@ -257,5 +257,10 @@ width: 40%;
   width: 270px !important;
   color: white;
   padding: 20px 0 40px;
+}
+}
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+  .banner_content {
+    padding: 200px 0 100px;
 }
 }
